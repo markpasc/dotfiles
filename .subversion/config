@@ -1,0 +1,10 @@
+[auth]
+# store-passwords = no
+# store-auth-creds = no
+
+[helpers]
+diff-cmd = /usr/bin/colordiff
+
+[miscellany]
+global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo ._* *.rej *~ #*# .#* .*.swp .DS_Store
+

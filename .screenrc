@@ -1,0 +1,17 @@
+setenv LC_CTYPE en_US.UTF-8
+defutf8 on
+
+autodetach on
+crlf off
+deflogin off
+hardcopy_append on
+defscrollback 30000
+
+startup_message off
+vbell off
+vbell_msg "HAY YOU HAEV TEH BELL"
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.Bk}%-w%{.Rk}%n %t%{-}%+w %= %H %{.Gk} %m/%d %C%a "
+
