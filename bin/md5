@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+import hashlib
+import sys
+
+md5 = hashlib.md5()
+for arg in sys.argv[1:]:
+    md5.update(arg)
+print md5.hexdigest()
+
