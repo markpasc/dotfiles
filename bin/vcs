@@ -1,0 +1,31 @@
+#!/bin/sh
+# which vcs am i using again?
+
+if [ -e .svn ]
+then
+    echo "svn"
+fi
+
+git rev-parse --is-inside-work-tree > /dev/null 2> /dev/null
+if [ 0 -eq $? ]
+then
+    echo "git"
+
+    git svn info --url > /dev/null 2> /dev/null
+    if [ 0 -eq $? ]
+    then
+        echo "svn"
+    fi
+fi
+
+hg status > /dev/null 2> /dev/null
+if [ 0 -eq $? ]
+then
+    echo "hg"
+
+    if [ -n "`hg gremote`" ]
+    then
+        echo "git"
+    fi
+fi
+
