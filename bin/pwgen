@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+from optparse import OptionParser
+from random import choice
+import string
+
+parser = OptionParser()
+parser.add_option('-n', '--number', dest="number",
+                  help="number of characters", metavar="N", default=30)
+opts, args = parser.parse_args()
+
+candidates = string.letters + string.digits + string.digits
+
+print ''.join(choice(candidates) for x in xrange(1, int(opts.number)))
+
