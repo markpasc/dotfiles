@@ -17,5 +17,6 @@ fi
 alias mysql="mysql --pager='less -SX'"
 alias less="less -RF"
 
+alias mkdir="mkdir -vp"
 alias diff="colordiff"
 
