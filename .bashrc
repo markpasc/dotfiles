@@ -20,4 +20,5 @@ export ACK_PAGER='less -RF'
 export ACK_OPTIONS=--follow
 
 . ~/bin/bash_completion
+. ~/.bash_local
 
