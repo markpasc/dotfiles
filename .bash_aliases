@@ -1,7 +1,5 @@
 alias realias="$EDITOR ~/.bash_aliases; source ~/.bash_aliases"
 
-SYSTEM=`uname -s`
-
 # editing
 if [ $SYSTEM == "Darwin" ]
 then
