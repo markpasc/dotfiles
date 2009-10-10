@@ -10,7 +10,6 @@ set autoindent
 set shiftwidth=4
 
 set ruler
-set incsearch
 
 set iskeyword+=:
 
