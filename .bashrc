@@ -3,8 +3,12 @@ then
 	. /etc/bashrc
 fi
 
-export PS1='\u@\h:\w\$ '
+# gimme screen compatible history
+shopt -s histappend
+shopt -s checkwinsize
+export HISTCONTROL=ignoredups
 
+export PS1='\u@\h:\w\$ '
 
 export EDITOR=vim
 export ACK_PAGER='less -RF'
