@@ -1,12 +1,9 @@
 #!/bin/bash
 
-function relink() {
-  if [-e $1] ; then rm -i $1; fi
-  ln -sn $2 $1
-}
+FILES=".bashrc .colordiffrc .screenrc .vimrc bin/*"
 
-cd ~
-relink .bash_profile ~/.dotfiles/.bash_profile
-relink .bashrc ~/.dotfiles/.bashrc
-relink .gitconfig ~/.dotfiles/.gitconfig
-relink bin ~/.dotfiles/bin
+cd ~/.dotfiles
+for file in $FILES
+do
+    ln -sniv ~/.dotfiles/$file ../$file
+done
