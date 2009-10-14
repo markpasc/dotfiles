@@ -4,6 +4,7 @@ alias realias="$EDITOR ~/.bash_aliases; source ~/.bash_aliases"
 if [ $SYSTEM == "Darwin" ]
 then
     alias ls="ls -lFG"
+    alias mate="open -a TextMate.app"
 else
     alias ls="ls --color=tty -lF"
 fi
