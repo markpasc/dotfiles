@@ -14,7 +14,7 @@ export PS1='\u@\h:\w\$ '
 
 if [ $SYSTEM == 'Darwin' ]
 then
-    export EDITOR=mate
+    export EDITOR='mate -w'
 else
     export EDITOR=vim
 fi
