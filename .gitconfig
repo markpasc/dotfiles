@@ -9,4 +9,4 @@
 [github]
 	user = markpasc
 [push]
-	default = tracking
+	default = current
