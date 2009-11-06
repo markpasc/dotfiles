@@ -24,6 +24,3 @@ if has("multi_byte")
     set fileencodings=utf-8
 endif
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
-
