@@ -19,4 +19,5 @@ alias less="less -RF"
 
 alias mkdir="mkdir -vp"
 alias diff="colordiff"
+alias pywhich="pywhich -s -i"
 
