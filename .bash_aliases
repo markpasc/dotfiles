@@ -21,3 +21,5 @@ alias mkdir="mkdir -vp"
 alias diff="colordiff"
 alias pywhich="pywhich -s -i"
 
+alias spawn-django="spawn --factory=spawning.django_factory.config_factory settings"
+
