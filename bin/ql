@@ -1,0 +1,3 @@
+#!/bin/sh
+# http://srhaber.com/blog/2007/11/04/quick-look-from-the-command-line/
+qlmanage -p "$@" >& /dev/null
