@@ -22,7 +22,6 @@ fi
 export ACK_PAGER='less -RF'
 export ACK_OPTIONS=--follow
 
-test -e ~/bin/bash_completion && source ~/bin/bash_completion
 test -e ~/.bash_local && source ~/.bash_local
-. ~/.bash_aliases
+source ~/.bash_aliases
 
