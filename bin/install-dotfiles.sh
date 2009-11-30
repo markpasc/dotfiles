@@ -6,5 +6,5 @@ cd ~/.dotfiles
 for file in $FILES
 do
     DIR=`dirname ../$file` test -d $DIR || mkdir $DIR
-    ln -sniv ~/.dotfiles/$file ../$file
+    ln -snfv ~/.dotfiles/$file ../$file
 done
