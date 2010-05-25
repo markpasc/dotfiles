@@ -22,6 +22,8 @@ fi
 export ACK_PAGER='less -RF'
 export ACK_OPTIONS=--follow
 
+export PYTHONSTARTUP="$HOME/bin/pyhistory.py"
+
 test -e ~/.bash_local && source ~/.bash_local
 source ~/.bash_aliases
 
