@@ -14,8 +14,7 @@ export PS1='\u@\h:\w\$ '
 
 if [ $SYSTEM == 'Darwin' ]
 then
-    export EDITOR='mate -w'
-    export GIT_EDITOR='mate -wl1'
+    source ~/.bash_mac
 else
     export EDITOR=vim
 fi
