@@ -10,3 +10,5 @@
 	user = markpasc
 [push]
 	default = current
+[alias]
+	tube = log --graph --pretty=oneline --abbrev-commit --decorate --color
