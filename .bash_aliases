@@ -5,6 +5,7 @@ if [ $SYSTEM == "Darwin" ]
 then
     alias ls="ls -lFG"
     alias less="less -RFX"
+    alias hide="SetFile -a V"
 else
     alias ls="ls --color=tty -lF"
     alias less="less -RF"
