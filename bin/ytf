@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+
+#
+#  ytf
+#
+#  Describe a YouTube video from the command line.
+#
+
+
+from __future__ import division
+
+import re
+import sys
+from textwrap import wrap
+from xml.etree import cElementTree as ElementTree
+
+import httplib2
+
+
+def video_id_for_url(url):
+    mo = re.match(r'^([\w-]{11})$', url)
+    if mo is not None:
+        return url
+
+    mo = re.search(r'(?:v=|youtu\.be/)([\w-]{11})', url)
+    if mo is not None:
+        return mo.group(1)
+
+    raise ValueError("Can't determine video ID from URL %r" % url)
+
+
+def fetch(video_id):
+    h = httplib2.Http()
+    resp, cont = h.request('http://gdata.youtube.com/feeds/api/videos/%s' % video_id)
+    if resp.status != 200:
+        raise ValueError("Unexpected response from YouTube: %d %s" % (resp.status, resp.reason))
+    if not resp['content-type'].startswith('application/atom+xml'):
+        raise ValueError("Unexpected response from YouTube: %s" % resp['content-type'])
+
+    doc = ElementTree.fromstring(cont)
+    data = {
+        'title': doc.findtext('./{http://www.w3.org/2005/Atom}title'),
+        'keywords': doc.findtext('./{http://search.yahoo.com/mrss/}group/{http://search.yahoo.com/mrss/}keywords'),
+        'description': '\n'.join(wrap(doc.findtext('./{http://search.yahoo.com/mrss/}group/{http://search.yahoo.com/mrss/}description'))),
+        'date': doc.findtext('./{http://www.w3.org/2005/Atom}published')[:10],
+        'author': doc.findtext('./{http://www.w3.org/2005/Atom}author/{http://www.w3.org/2005/Atom}name'),
+    }
+
+    stats = doc.find('./{http://gdata.youtube.com/schemas/2007}statistics')
+    if stats is not None:
+        data['views'] = stats.attrib['viewCount']
+
+    duration = doc.find('./{http://search.yahoo.com/mrss/}group/{http://gdata.youtube.com/schemas/2007}duration')
+    if duration is not None:
+        duration_secs = int(duration.attrib['seconds'])
+        data['duration'] = '%d:%d' % (duration_secs / 60, duration_secs % 60)
+
+    return data
+
+
+def show_data(data):
+    text = """
+%(title)s (%(duration)s)
+Posted %(date)s by %(author)s to %(views)s views
+
+%(description)s
+    """ % data
+    print text.strip()
+    print
+
+
+def main(argv):
+    try:
+        show_data(fetch(video_id_for_url(argv[0])))
+    except Exception, exc:
+        print >>sys.stderr, '%s: %s' % (type(exc).__name__, str(exc))
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
