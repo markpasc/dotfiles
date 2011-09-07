@@ -1,0 +1,4 @@
+#!/bin/sh
+UPDATE="git update-index --remove $@"
+echo "git filter-branch --prune-empty -f --index-filter '$UPDATE' HEAD"
+git filter-branch --prune-empty -f --index-filter "$UPDATE" HEAD 
