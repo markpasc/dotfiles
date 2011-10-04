@@ -36,3 +36,5 @@ defaults write com.apple.iTunes disablePing -bool true
 
 # hide some home folders in the GUI
 chflags hidden ~/Public ~/bin ~/Movies
+
+for app in Dock Safari iTunes SystemUIServer; do killall $app ; done
