@@ -12,3 +12,5 @@ done
 # fix up git config to use ignores file
 git config --global core.excludesfile ~/.gitignore-global
 
+# run the .osx stuff
+sh ~/.dotfiles/mac
