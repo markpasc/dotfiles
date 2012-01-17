@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=".bashrc .bash_mac .bash_aliases .colordiffrc .gitconfig .gitignore-global .screenrc .vimrc .vim/colors/dw_orange.vim bin/*"
+FILES=".bashrc .bash_mac .bash_aliases .colordiffrc .gitconfig .gitignore-global .hgrc .screenrc .vimrc .vim/colors/dw_orange.vim bin/*"
 
 cd ~/.dotfiles
 for file in $FILES
