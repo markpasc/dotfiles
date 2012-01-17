@@ -12,7 +12,7 @@ def set_up_history():
 def set_up_logging():
     import logging
     logging.basicConfig(level=logging.DEBUG,
-        format='%(asctime)-8s %(levelname)-8s %(name)-15s %(msg)s',
+        format='%(asctime)-8s %(levelname)-8s %(name)-15s %(message)s',
         datefmt='%H:%M:%S')
 
 set_up_history()
