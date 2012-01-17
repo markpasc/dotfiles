@@ -14,7 +14,7 @@ export PS1='\u@\h:\w\$ '
 
 export PATH="$HOME/bin:$PATH"
 export ACK_PAGER='less -RF'
-export ACK_OPTIONS=--follow
+export ACK_OPTIONS='--follow --type-set coffee=.coffee'
 
 export PYTHONSTARTUP="$HOME/bin/pyhistory.py"
 
