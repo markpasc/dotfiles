@@ -1,3 +1,5 @@
+[core]
+	excludesfile = ~/.gitignore-global
 [color]
 	branch = auto
 	diff = auto
