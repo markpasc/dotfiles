@@ -10,6 +10,9 @@ defaults write com.apple.dock orientation -string right
 # Pin the dock at the bottom
 defaults write com.apple.dock pinning -string end
 
+# Expand the save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
@@ -25,8 +28,18 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Require password after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeDebugMenu -bool true
+
+# Make Safari’s search banners default to Contains instead of Starts With
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
 
 # Disable the Ping sidebar in iTunes
 defaults write com.apple.iTunes disablePingSidebar -bool true
