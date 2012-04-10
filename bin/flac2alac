@@ -1,0 +1,2 @@
+#!/bin/sh
+for x in *.flac; do ffmpeg -i "$x" -acodec alac "`basename "$x" .flac`.m4a"; done
