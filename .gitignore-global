@@ -1,3 +1,6 @@
+# Make this file compatible with hg. git will ignore any file named "syntax: glob".
+syntax: glob
+
 *.pyc
 .env
 *.egg-info

@@ -1,3 +1,22 @@
+[pager]
+pager = LESS='RFX' less
+attend = annotate, cat, diff, export, glog, log, qdiff, status, help
+
+[ui]
+username = Mark Paschal <markpasc@markpasc.org>
+ignore.other = ~/.gitignore-global
+editor = vim
+
+[color]
+status.modified = blue bold
+status.added = green bold
+status.removed = red bold
+status.deleted = magenta bold
+status.unknown = none
+status.ignored = black bold
+
 [extensions]
+color = 
+pager = 
 hgext.bookmarks = 
 hggit = 
