@@ -31,6 +31,7 @@ then
     source ~/.bash_mac
 else
     export EDITOR=vim
+    export LANG=en_US.UTF-8
 fi
 
 test -e ~/.bash_local && source ~/.bash_local
