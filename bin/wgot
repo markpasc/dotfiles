@@ -1,2 +1,2 @@
 #!/bin/sh
-wget -c -r -np -erobots=off "$1"
+wget -c -r -np -erobots=off $@
