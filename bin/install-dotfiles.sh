@@ -9,5 +9,8 @@ do
     ln -snfv ~/.dotfiles/$file ../$file
 done
 
-# run the .osx stuff
-sh ~/.dotfiles/mac
+# run the .osx stuff on the mac
+if [ $SYSTEM == "Darwin" ]
+then
+    sh ~/.dotfiles/mac
+fi
