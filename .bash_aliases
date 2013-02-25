@@ -6,6 +6,7 @@ then
     alias ls="ls -lFG"
     alias less="less -RFX"
     alias hide="SetFile -a V"
+    alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 else
     alias ls="ls --color=tty -lF"
     alias less="less -RF"
