@@ -3,5 +3,7 @@ syntax: glob
 
 *.pyc
 .env
+.env3
 *.egg-info
 dist
+.DS_Store
