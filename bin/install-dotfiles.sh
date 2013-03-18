@@ -9,6 +9,9 @@ do
     ln -snfv ~/.dotfiles/$file ../$file
 done
 
+# Include pywhich from its submodule.
+ln -snfv ~/.dotfiles/pywhich/bin/pywhich ../bin/pywhich
+
 # run the .osx stuff on the mac
 if [ $SYSTEM == "Darwin" ]
 then
