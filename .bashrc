@@ -24,7 +24,7 @@ export PATH="$HOME/bin:$PATH"
 export ACK_PAGER='less -RF'
 export ACK_OPTIONS='--follow --type-set coffee=.coffee'
 
-export PYTHONSTARTUP="$HOME/bin/pyhistory.py"
+#export PYTHONSTARTUP="$HOME/bin/pyhistory.py"
 
 if [ $SYSTEM == 'Darwin' ]
 then
