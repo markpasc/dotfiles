@@ -13,7 +13,7 @@ done
 ln -snfv ~/.dotfiles/pywhich/bin/pywhich ../bin/pywhich
 
 # run the .osx stuff on the mac
-if [ $SYSTEM == "Darwin" ]
+if [ "x$SYSTEM" == "xDarwin" ]
 then
     sh ~/.dotfiles/mac
 fi
