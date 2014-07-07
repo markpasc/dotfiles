@@ -1,2 +1,2 @@
 #!/bin/sh
-wget -c -r -np -erobots=off $@
+wget -c -r -np -erobots=off --no-check-certificate $@
