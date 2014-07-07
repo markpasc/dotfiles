@@ -2,6 +2,9 @@
 pager = LESS='RFX' less
 attend = annotate, cat, diff, export, glog, log, qdiff, status, help
 
+[diff]
+git = True
+
 [ui]
 username = Mark Paschal <markpasc@markpasc.org>
 ignore.other = ~/.gitignore-global
