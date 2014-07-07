@@ -19,7 +19,7 @@ status.unknown = none
 status.ignored = black bold
 
 [extensions]
-color = 
-pager = 
-hgext.bookmarks = 
+color =
+pager =
+hgext.bookmarks =
 record =
