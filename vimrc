@@ -8,6 +8,7 @@ set tabstop=4
 set expandtab
 set autoindent
 set shiftwidth=4
+filetype indent plugin on
 
 set ruler
 
