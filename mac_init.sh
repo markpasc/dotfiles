@@ -25,6 +25,9 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Allow text selection during quicklook
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -47,10 +50,13 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 # Disable all the other Ping stuff in iTunes
 defaults write com.apple.iTunes disablePing -bool true
 
-# hide some home folders in the GUI
-chflags hidden ~/Public ~/bin ~/Movies
+# Disable 2-swipe left & right to back & forward through history, which is even touchier than Safari's so just don't don't do it
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
-# set available line wrap lengths in TextMate
+# hide some home folders in the GUI
+chflags hidden ~/Applications ~/bin ~/Desktop ~/Movies ~/Public
+
+# set available line wrap lengths in TextMate 1
 defaults write com.macromates.textmate OakWrapColumns '( 60, 76, 78, 120 )'
 
-for app in Dock Safari iTunes SystemUIServer; do killall $app ; done
+for app in Dock Finder iTunes Safari SystemUIServer; do killall $app ; done
