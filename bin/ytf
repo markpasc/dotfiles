@@ -31,7 +31,7 @@ def video_id_for_url(url):
 
 def fetch(video_id):
     h = httplib2.Http()
-    resp, cont = h.request('http://gdata.youtube.com/feeds/api/videos/%s' % video_id)
+    resp, cont = h.request('https://gdata.youtube.com/feeds/api/videos/%s' % video_id)
     if resp.status != 200:
         raise ValueError("Unexpected response from YouTube: %d %s" % (resp.status, resp.reason))
     if not resp['content-type'].startswith('application/atom+xml'):
