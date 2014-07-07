@@ -53,7 +53,7 @@ def fetch(video_id):
     duration = doc.find('./{http://search.yahoo.com/mrss/}group/{http://gdata.youtube.com/schemas/2007}duration')
     if duration is not None:
         duration_secs = int(duration.attrib['seconds'])
-        data['duration'] = '%d:%d' % (duration_secs / 60, duration_secs % 60)
+        data['duration'] = '%d:%02d' % (duration_secs / 60, duration_secs % 60)
 
     return data
 
