@@ -1,14 +1,16 @@
-[pager]
-pager = LESS='RFX' less
-attend = annotate, cat, diff, export, glog, log, qdiff, status, help
-
-[diff]
-git = True
-
 [ui]
 username = Mark Paschal <markpasc@markpasc.org>
 ignore.other = ~/.gitignore-global
-editor = vim
+#editor = vim
+editor = mate -w
+merge = internal:merge
+
+[pager]
+pager = LESS='RFX' less
+attend = annotate, cat, diff, export, log, qdiff, status, help
+
+[diff]
+git = True
 
 [color]
 status.modified = blue bold
@@ -20,6 +22,11 @@ status.ignored = black bold
 
 [extensions]
 color =
+convert =
+histedit =
 pager =
-hgext.bookmarks =
+purge =
+rebase =
 record =
+shelve =
+strip =

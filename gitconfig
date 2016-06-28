@@ -1,18 +1,33 @@
 [core]
 	excludesfile = ~/.gitignore-global
+	editor = mate -w
+[user]
+	name = Mark Paschal
+	email = markpasc@markpasc.org
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
-[user]
-	name = Mark Paschal
-	email = markpasc@markpasc.org
 [github]
 	user = markpasc
-[push]
-	default = current
-[alias]
-	tube = log --graph --pretty=oneline --abbrev-commit --decorate --color
+
 [branch]
 	autosetuprebase = always
+[log]
+	abbrevCommit = true
+	decorate = true
+[push]
+	default = current
+[status]
+	branch = true
+
+[alias]
+	ann = annotate
+	outgoing = log @{upstream}..
+	out = log @{upstream}..
+	incoming = log ..@{upstream}
+	in = log ..@{upstream}
+	st = status -sb
+	export = format-patch -1
+	import = am
