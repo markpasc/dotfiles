@@ -21,8 +21,6 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export PS1="\\w `~/.dotfiles/moonphase.py`  "
 
 export PATH="$HOME/bin:$PATH"
-export ACK_PAGER='less -RF'
-export ACK_OPTIONS='--follow --type-set coffee=.coffee'
 
 #export PYTHONSTARTUP="$HOME/bin/pyhistory.py"
 
@@ -39,3 +37,6 @@ source ~/.bash_aliases
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export ACK_PAGER='less -RFXS'
+export ACK_OPTIONS='--follow'

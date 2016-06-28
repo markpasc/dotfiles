@@ -21,6 +21,7 @@ fi
 # paging
 alias mysql="mysql --pager='less -SX'"
 
+alias ack='ag --pager="$ACK_PAGER"'
 alias mkdir="mkdir -vp"
 alias diff="colordiff"
 alias pywhich="pywhich -s -i"
