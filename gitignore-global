@@ -8,3 +8,7 @@ syntax: glob
 dist
 .DS_Store
 xcuserdata
+
+.tm_properties
+.ruby-version
+.ruby-gemset
