@@ -1,6 +1,11 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export CDPATH="$CDPATH:$HOME/Work"
 export EDITOR='mate -w'
 export ACK_PAGER='less -RFX'
 export GEM_HOME="$(brew --prefix)"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
 export PS1="\\w $(~/.dotfiles/moonphase.py)  "

@@ -4,13 +4,9 @@ then
 fi
 
 export SYSTEM=`uname -s`
-
-# gimme screen compatible history
-shopt -s histappend
-shopt -s checkwinsize
-export HISTCONTROL=ignoredups
-
 export PATH="$HOME/bin:$PATH"
+source ~/.dotfiles/sensible.bash
+PROMPT_DIRTRIM=4
 
 if [ $SYSTEM == 'Darwin' ]
 then
