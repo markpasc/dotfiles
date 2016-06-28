@@ -1,5 +1,6 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR='mate -w'
-export GIT_EDITOR=vim
 export ACK_PAGER='less -RFX'
 export GEM_HOME="$(brew --prefix)"
+
+export PS1="\\w $(~/.dotfiles/moonphase.py)  "
