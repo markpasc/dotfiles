@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES="bashrc bash_mac bash_aliases colordiffrc gitconfig gitignore-global hgrc screenrc vimrc vim/colors/dw_orange.vim"
+DOTFILES="bashrc bash_mac bash_aliases colordiffrc gitconfig gitignore-global tmux.conf tm_properties hgrc screenrc vimrc vim/colors/dw_orange.vim"
 FILES="bin/*"
 
 cd ~/.dotfiles
