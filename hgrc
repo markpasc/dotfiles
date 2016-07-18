@@ -12,6 +12,11 @@ attend = annotate, cat, diff, export, log, qdiff, status, help
 [diff]
 git = True
 
+[alias]
+fetch = pull
+pull = pull -u
+remote = !hg-remote.py $@
+
 [color]
 status.modified = blue bold
 status.added = green bold
